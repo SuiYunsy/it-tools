@@ -96,8 +96,11 @@ function resizeTextarea() {
     return;
   }
 
-  const scrollHeight = textareaRef.value.scrollHeight + 2;
+  // 重置高度为 auto，以便重新计算
+  inputWrapperRef.value.style.height = 'auto';
 
+  // 根据 scrollHeight 设置新的高度
+  const scrollHeight = textareaRef.value.scrollHeight + 2; // 添加 2px 的缓冲
   inputWrapperRef.value.style.height = `${scrollHeight}px`;
 }
 

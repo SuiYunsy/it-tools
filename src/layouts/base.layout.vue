@@ -35,7 +35,7 @@ const tools = computed<ToolCategory[]>(() => [
 <template>
   <MenuLayout class="menu-layout" :class="{ isSmallScreen: styleStore.isSmallScreen }">
     <template #sider>
-      <RouterLink to="/" class="hero-wrapper">
+      <!-- <RouterLink to="/" class="hero-wrapper">
         <HeroGradient class="gradient" />
         <div class="text-wrapper">
           <div class="title">
@@ -46,7 +46,7 @@ const tools = computed<ToolCategory[]>(() => [
             {{ $t('home.subtitle') }}
           </div>
         </div>
-      </RouterLink>
+      </RouterLink> -->
 
       <div class="sider-content">
         <div v-if="styleStore.isSmallScreen" flex flex-col items-center>
@@ -59,7 +59,7 @@ const tools = computed<ToolCategory[]>(() => [
 
         <CollapsibleToolMenu :tools-by-category="tools" />
 
-        <div class="footer">
+        <!-- <div class="footer">
           <div>
             IT-Tools
 
@@ -85,7 +85,7 @@ const tools = computed<ToolCategory[]>(() => [
               Corentin Thomasset
             </c-link>
           </div>
-        </div>
+        </div> -->
       </div>
     </template>
 
@@ -120,7 +120,7 @@ const tools = computed<ToolCategory[]>(() => [
           <NavbarButtons v-if="!styleStore.isSmallScreen" />
         </div>
 
-        <c-tooltip position="bottom" :tooltip="$t('home.support')">
+        <!-- <c-tooltip position="bottom" :tooltip="$t('home.support')">
           <c-button
             round
             href="https://www.buymeacoffee.com/cthmsst"
@@ -133,7 +133,7 @@ const tools = computed<ToolCategory[]>(() => [
             {{ $t('home.buyMeACoffee') }}
             <NIcon v-if="!styleStore.isSmallScreen" :component="Heart" ml-2 />
           </c-button>
-        </c-tooltip>
+        </c-tooltip> -->
       </div>
       <slot />
     </template>
@@ -173,8 +173,8 @@ const tools = computed<ToolCategory[]>(() => [
 }
 
 .sider-content {
-  padding-top: 160px;
-  padding-bottom: 200px;
+  padding-top: 0px;
+  padding-bottom: 10px;
 }
 
 .hero-wrapper {

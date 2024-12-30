@@ -24,7 +24,7 @@ const theme = useTheme();
   background-color: v-bind('theme.backgroundColor');
   border: 1px solid v-bind('theme.borderColor');
   border-radius: 4px;
-  padding: 20px 24px;
+  padding: 12px 24px;
 
   &-title {
     font-size: 16px;
