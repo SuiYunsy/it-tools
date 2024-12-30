@@ -20,7 +20,7 @@ const { isDarkTheme } = toRefs(styleStore);
     </c-button>
   </c-tooltip>
 
-  <c-tooltip :tooltip="$t('home.nav.twitterX')" position="bottom">
+  <!-- <c-tooltip :tooltip="$t('home.nav.twitterX')" position="bottom">
     <c-button
       circle
       variant="text"
@@ -31,7 +31,7 @@ const { isDarkTheme } = toRefs(styleStore);
     >
       <n-icon size="25" :component="IconBrandX" />
     </c-button>
-  </c-tooltip>
+  </c-tooltip> -->
 
   <c-tooltip :tooltip="$t('home.nav.about')" position="bottom">
     <c-button circle variant="text" to="/about" :aria-label="$t('home.nav.aboutLabel')">

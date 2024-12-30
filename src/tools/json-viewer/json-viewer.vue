@@ -9,8 +9,8 @@ import TextareaCopyable from '@/components/TextareaCopyable.vue';
 const inputElement = ref<HTMLElement>();
 
 const rawJson = useStorage('json-prettify:raw-json', '{"hello": "world", "foo": "bar"}');
-const indentSize = useStorage('json-prettify:indent-size', 3);
-const sortKeys = useStorage('json-prettify:sort-keys', true);
+const indentSize = useStorage('json-prettify:indent-size', 2);
+const sortKeys = useStorage('json-prettify:sort-keys', false);
 const cleanJson = computed(() => withDefaultOnError(() => formatJson({ rawJson, indentSize, sortKeys }), ''));
 
 const rawJsonValidation = useValidation({
@@ -45,7 +45,7 @@ const rawJsonValidation = useValidation({
       ref="inputElement"
       v-model:value="rawJson"
       placeholder="Paste your raw JSON here..."
-      rows="20"
+      rows="2"
       multiline
       autocomplete="off"
       autocorrect="off"

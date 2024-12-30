@@ -25,37 +25,6 @@ const b64ValidationWatch = [decodeUrlSafe];
 </script>
 
 <template>
-  <c-card title="String to base64">
-    <n-form-item label="Encode URL safe" label-placement="left">
-      <n-switch v-model:value="encodeUrlSafe" />
-    </n-form-item>
-    <c-input-text
-      v-model:value="textInput"
-      multiline
-      placeholder="Put your string here..."
-      rows="5"
-      label="String to encode"
-      raw-text
-      mb-5
-    />
-
-    <c-input-text
-      label="Base64 of string"
-      :value="base64Output"
-      multiline
-      readonly
-      placeholder="The base64 encoding of your string will be here"
-      rows="5"
-      mb-5
-    />
-
-    <div flex justify-center>
-      <c-button @click="copyTextBase64()">
-        Copy base64
-      </c-button>
-    </div>
-  </c-card>
-
   <c-card title="Base64 to string">
     <n-form-item label="Decode URL safe" label-placement="left">
       <n-switch v-model:value="decodeUrlSafe" />
@@ -63,8 +32,8 @@ const b64ValidationWatch = [decodeUrlSafe];
     <c-input-text
       v-model:value="base64Input"
       multiline
+      rows="2"
       placeholder="Your base64 string..."
-      rows="5"
       :validation-rules="b64ValidationRules"
       :validation-watch="b64ValidationWatch"
       label="Base64 string to decode"
@@ -76,7 +45,7 @@ const b64ValidationWatch = [decodeUrlSafe];
       label="Decoded string"
       placeholder="The decoded string will be here"
       multiline
-      rows="5"
+      rows="2"
       readonly
       mb-5
     />
@@ -84,6 +53,37 @@ const b64ValidationWatch = [decodeUrlSafe];
     <div flex justify-center>
       <c-button @click="copyText()">
         Copy decoded string
+      </c-button>
+    </div>
+  </c-card>
+
+  <c-card title="String to base64">
+    <n-form-item label="Encode URL safe" label-placement="left">
+      <n-switch v-model:value="encodeUrlSafe" />
+    </n-form-item>
+    <c-input-text
+      v-model:value="textInput"
+      multiline
+      rows="2"
+      placeholder="Put your string here..."
+      label="String to encode"
+      raw-text
+      mb-5
+    />
+
+    <c-input-text
+      label="Base64 of string"
+      :value="base64Output"
+      multiline
+      rows="2"
+      readonly
+      placeholder="The base64 encoding of your string will be here"
+      mb-5
+    />
+
+    <div flex justify-center>
+      <c-button @click="copyTextBase64()">
+        Copy base64
       </c-button>
     </div>
   </c-card>

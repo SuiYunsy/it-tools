@@ -54,6 +54,7 @@ onMounted(() => {
     minimap: {
       enabled: false,
     },
+    wordWrap: 'on',
   });
 
   editor.setModel({

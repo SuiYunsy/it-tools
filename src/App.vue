@@ -49,4 +49,8 @@ html {
 * {
   box-sizing: border-box;
 }
+
+input {
+  height: var(--n-height) !important;
+}
 </style>
